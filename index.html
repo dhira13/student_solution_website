@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Solution Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Student Solution Website</h1>
+        <nav>
+            <ul>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#quizzes">Quizzes</a></li>
+                <li><a href="#study-materials">Study Materials</a></li>
+                <li><a href="#teacher-section">Teacher Section</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li> <!-- Logout Link -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Notes Section -->
+            <section id="notes" class="column">
+                <h2>Notes</h2>
+                <textarea id="notesInput" placeholder="Write your notes here..."></textarea>
+                <button onclick="saveNotes()">Save Notes</button>
+                <div id="savedNotes"></div>
+            </section>
+
+            <!-- Quizzes Section -->
+            <section id="quizzes" class="column">
+                <h2>Quizzes</h2>
+                <button onclick="startQuiz()">Start Quiz</button>
+                <div id="quizContainer"></div>
+            </section>
+
+            <!-- Study Materials Section -->
+            <section id="study-materials" class="column">
+                <h2>Study Materials</h2>
+                <ul id="materialsList"></ul>
+                <input type="text" id="materialInput" placeholder="Add study material URL...">
+                <button onclick="addMaterial()">Add Material</button>
+            </section>
+
+            <!-- Teacher Section -->
+            <section id="teacher-section" class="column">
+                <h2>Teacher Section</h2>
+                <textarea id="teacherInput" placeholder="Upload study materials..."></textarea>
+                <button onclick="uploadMaterials()">Upload Materials</button>
+                <div id="uploadedMaterials"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Student Solution Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
